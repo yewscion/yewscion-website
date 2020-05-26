@@ -1,0 +1,212 @@
+body {
+    background-color: #EEE;
+}
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "banner"
+            "nav"
+            ".";
+    justify-items: stretch;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+}
+
+#topbanner {
+    background-color: #EEE;
+    background: linear-gradient(180deg, #FFF 0%, #CCC 50%, #555 60%, #000 100%);
+    grid-area: banner;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header #topbanner a img {
+    margin:auto;
+    display: block;
+    padding-top: 1em;
+    width: 5em;
+}
+header a h1 {
+    color: white;
+    text-align: center;
+}
+
+header nav {
+    grid-area: nav;
+    padding: 0;
+}
+
+header nav ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+header nav ul a {
+    max-width: 3em;
+    margin: 0;
+    vertical-align: top;
+}
+header nav ul li {
+    background-color: black;
+    margin: 0;
+    margin-left: 0.1em;
+    padding: 0.6em;
+    width: 3em;
+    color: white;
+    display: inline-block;
+    font-size: small;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: white;
+    border: 1px solid #CCC;
+    border-top: none;
+}
+
+main section {
+}
+
+main h2 {
+    background: black;
+    background: linear-gradient(90deg, #FFF, #FFF,  #000);
+    color: white;
+    text-align: right;
+    font-size: medium;
+    margin-bottom: 0;
+    border-top: 1px #DDD solid;
+}
+
+main p {
+    margin-top: -1px;
+    padding: 1em;
+    border-bottom: 1px #DDD solid;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "desc badg"
+            "smap smap";
+    max-width: 90%;
+    margin: auto;
+    font-size: x-small;
+}
+
+footer #description {
+    grid-area: desc;
+    text-align: center;
+}
+
+footer  h2 {
+    font-size: small;
+}
+
+footer  p {
+    font-size: x-small;
+    font-style: italic;
+    color: #555;
+}
+
+
+
+footer #badges {
+    grid-area: badg;
+    text-align: center;
+}
+
+footer #badges h2 {
+}
+
+footer #badges img {
+    width:70px;
+}
+
+footer #sitemap {
+    grid-area: smap;
+    padding-left: 1em;
+}
+footer #sitemap h2 {
+    text-align: center;
+}
+
+footer #sitemap nav {
+}
+
+footer #sitemap ul {
+    padding: 0;
+    margin: 0;
+    display: inline;
+    list-style-type: none;
+    font-size: x-small;
+}
+
+footer #sitemap ul a {
+    text-decoration: none;
+    color: black;
+}
+
+
+@media only screen and (min-width: 600px) {
+    header {
+        width: 60%;
+        margin: auto;
+        display: grid;
+        align-items: end;
+        grid-template-columns: minmax(10em, 1fr) 4fr;
+        grid-template-areas:
+            "banner ."
+        ". nav";
+    }
+
+    #topbanner {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    header a {
+    }
+
+    header #topbanner a img {
+    }
+    header a h1 {
+    }
+
+    header nav {
+        align-self: end;
+    }
+    header nav ul {
+        padding: 0;
+        
+    }
+
+    main {
+        max-width: 60%;
+        margin: auto;
+        grid-template-columns: 3fr 2fr;
+    }
+
+    main h2 {
+        border: 1px #DDD solid;
+        border-bottom: none;
+    }
+
+    main p {
+        border: 1px #DDD solid;
+        border-top: none;
+    }
+    main section {
+        margin: 1em;
+    }
+}
