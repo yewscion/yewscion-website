@@ -6,6 +6,9 @@ addons:
       - openjdk-8-jre  # install Java8 as required by vnu.jar
 
 install:
- - pip install html5validator
+ - pip install html5validator localcrawl
 
-script: html5validator --root .
+script:
+  - localcrawl --start index.html --out _crawled/ --depth 3
+  - html5validator --root _crawled/
+  - rm _crawled/
