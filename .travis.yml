@@ -11,4 +11,4 @@ install:
 script:
   - localcrawl --start index.html --out _crawled/ --depth 3
   - html5validator --root _crawled/
-  - rm _crawled/
+  - rm -rfv _crawled/
