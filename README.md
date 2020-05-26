@@ -1,5 +1,7 @@
 # Yew Scion? Source
 
+[![Build Status](https://travis-ci.com/yewscion/yewscion-website.svg?branch=master)](https://travis-ci.com/yewscion/yewscion-website)
+
 This is the source code for the Yew Scion website.
 
 ## Favicons
